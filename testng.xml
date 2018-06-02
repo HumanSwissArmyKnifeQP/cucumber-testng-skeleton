@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Custom suite" verbose="1" thread-count="5" data-provider-thread-count="5" parallel="methods" configfailurepolicy="skip">
+    <listeners>
+        <!--Add test listeners-->
+    </listeners>
+    <test name="Login tests" annotations="JDK" preserve-order="false">
+        <classes>
+            <!--Add test classes-->
+            <class name="com.zucchini.sample.test.RunCukesTest"/>
+            <class name="com.zucchini.sample.test.RunCukesTest1"/>
+            <class name="com.zucchini.sample.test.RunCukesTest2"/>
+        </classes>
+    </test>
+</suite>
