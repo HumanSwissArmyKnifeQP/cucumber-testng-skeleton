@@ -1,6 +1,6 @@
-# Zucchini Framework
+# Zucchini Skeleton
 
-A general purpose multi-threaded test automation framework and sample test suite 
+A general purpose multi-threaded test automation scaffold and sample test suite 
 built upon Cucumber, TestNG, Selenium WebDriver.
 
 ## Features
