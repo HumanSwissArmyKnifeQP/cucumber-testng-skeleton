@@ -3,8 +3,11 @@ package com.zucchini.sample.test.stepdefs;
 import com.zucchini.framework.test.AbstractZucchiniGlue;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * TODO: Complete sample step definitions
+ */
 public class BrowserStepdefs extends AbstractZucchiniGlue {
-
+    
     public BrowserStepdefs() {
         
         super();
@@ -23,7 +26,4 @@ public class BrowserStepdefs extends AbstractZucchiniGlue {
             
         });
     }
-    
-    
-    
 }
