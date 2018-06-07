@@ -6,6 +6,7 @@ built upon Cucumber, TestNG, Selenium WebDriver.
 ## Features
 * Includes automatic web browser session clean up out of the box
 * Basic test reporting
+* Example usage
 
 ## ToDo
 * Dockerize
