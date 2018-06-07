@@ -11,15 +11,13 @@ public class AbstractPage {
         this.driver = driver;
     }
     
-    protected static <P extends AbstractPage> P instantiatePage(WebDriver driver, Class clazz){
-        
+    public static <P extends AbstractPage> P createPage(WebDriver driver, Class clazz){
         P page = (P) PageFactory.initElements(driver, clazz);
         return page;
     }
     
     public static <P extends AbstractPage> P goToPage(WebDriver driver, Class clazz, String url){
-        
         driver.get(url);
-        return instantiatePage(driver, clazz);
+        return createPage(driver, clazz);
     }
 }
