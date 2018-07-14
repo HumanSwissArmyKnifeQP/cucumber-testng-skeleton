@@ -4,4 +4,5 @@ Feature: Navigation 2
 
   Scenario: Verify I can go to Google Search page
     Given I am on the Google Search page
+    And I search for BitCoin
     Then we pass
