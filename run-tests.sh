@@ -1,2 +1,3 @@
 #!/bin/bash
-mvn -Dwebdriver.chrome.driver="../../WebDrivers/chromedriver" test
+mvn -DbrowserName="FIREFOX" test
+# mvn -DbrowserName="CHROME" test

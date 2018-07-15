@@ -29,10 +29,17 @@ public class DriverFactory {
         
         Capabilities caps = getCapabilities();
 
-        
-        return (url == null) ? 
+        WebDriver driver = (url == null) ? 
                 new RemoteWebDriver(caps) :
                 new RemoteWebDriver(url, caps);
+        
+        try{
+            driver.manage().window().maximize();
+        }catch(Exception e){
+            // Chrome Driver historically flaky when using maximize function...
+        }
+        
+        return driver;
     }
     
     public static Capabilities getCapabilities(){
@@ -43,13 +50,12 @@ public class DriverFactory {
         Capabilities caps = null;
         
         switch(browserName){
-            case "FIREFOX":
-                caps = new FirefoxOptions();
-                break;
-
-            default:
+            case "CHROME":
                 caps = new ChromeOptions();
                 ((ChromeOptions) caps).addArguments("--start-maximized");
+                break;
+            default:
+                caps = new FirefoxOptions();
                 break;
         }
         
